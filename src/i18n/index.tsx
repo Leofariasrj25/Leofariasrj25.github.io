@@ -11,11 +11,22 @@ const detectLocale = (): Locale => {
   return normalizeLocale(primary);
 };
 
+const updateMetaTags = (locale: Locale) => {
+  const t = TRANSLATIONS[locale];
+  document.title = `${t.hero.name} - ${t.hero.role}`;
+  document.documentElement.lang = locale;
+
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) {
+    metaDesc.setAttribute('content', t.hero.seo);
+  }
+};
+
 export const I18nProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [locale, setLocale] = useState<Locale>(() => detectLocale());
 
   useEffect(() => {
-    document.documentElement.lang = locale;
+    updateMetaTags(locale);
   }, [locale]);
 
   const value = useMemo<I18nContextValue>(
