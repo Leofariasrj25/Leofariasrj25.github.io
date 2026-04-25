@@ -10,10 +10,13 @@ const ThemeToggle: React.FC = () => {
     <button
       type="button"
       onClick={toggleTheme}
-      className="p-2 rounded-lg text-neutral-500 dark:text-neutral-400 hover:text-orange-600 dark:hover:text-orange-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all"
+      className="group relative p-2 rounded-lg text-neutral-500 dark:text-neutral-400 hover:text-orange-600 dark:hover:text-orange-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all"
       aria-pressed={isDark}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
+      <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap z-50">
+        {isDark ? "Switch to light" : "Switch to dark"}
+      </span>
       {isDark ? (
         <svg
           className="w-[18px] h-[18px]"

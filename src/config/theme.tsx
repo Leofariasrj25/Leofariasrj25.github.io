@@ -10,7 +10,7 @@ interface ThemeContextValue {
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 const getPreferredTheme = (): Theme => {
-  if (typeof window === "undefined") return "light";
+  if (typeof window === "undefined") return "dark";
 
   try {
     const stored = localStorage.getItem("theme");
@@ -21,7 +21,7 @@ const getPreferredTheme = (): Theme => {
     // ignore storage errors
   }
 
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return "dark";
 };
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
