@@ -61,6 +61,7 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
       location: "Sua Cidade, Pais",
       phone: "+55 (00) 00000-0000",
       email: "voce@seudominio.com",
+      seo: "Seu titulo SEO aqui.",
       about: [
         "Escreva aqui um resumo curto sobre quem voce e e qual problema voce resolve.",
         "No segundo paragrafo, explique sua especialidade tecnica e sua forma de trabalho.",
@@ -165,10 +166,11 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
       location: "Your City, Country",
       phone: "+00 000 000 0000",
       email: "you@yourdomain.com",
+      seo: "Your SEO title here.",
       about: [
         "Write a short summary about who you are and what problem you solve.",
         "In the second paragraph, explain your technical specialty and working style.",
-        "In the third paragraph, highlight business impact, leadership, and outcomes.",
+        "In the third paragraph, highlight business impact, leadership and outcomes.",
       ],
     },
     actions: {
