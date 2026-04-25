@@ -7,7 +7,9 @@ import EducationSection from "@/components/sections/Education";
 import Experience from "@/components/sections/Experience";
 import Projects from "@/components/sections/Projects";
 import TechnicalStack from "@/components/sections/TechnicalStack";
+import AnimatedSection from "@/components/ui/AnimatedSection";
 import AsciiParticles from "@/components/ui/AsciiParticles";
+import SectionHeading from "@/components/ui/SectionHeading";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { useI18n } from "@/i18n";
 
@@ -30,50 +32,24 @@ const App: React.FC = () => {
       >
         <Header particlesEnabled={particlesEnabled} onToggleParticles={toggleParticles} />
 
-        <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        >
-          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400 dark:text-neutral-500 mb-8 border-b border-neutral-200 dark:border-neutral-800 pb-2">
-            {t.sections.projects}
-          </h2>
+        <AnimatedSection delay={0}>
+          <SectionHeading title={t.sections.projects} />
           <Projects />
-        </motion.section>
+        </AnimatedSection>
 
-        <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.05 }}
-        >
-          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400 dark:text-neutral-500 mb-8 border-b border-neutral-200 dark:border-neutral-800 pb-2">
-            {t.sections.experience}
-          </h2>
+        <AnimatedSection delay={0.05}>
+          <SectionHeading title={t.sections.experience} />
           <Experience />
-        </motion.section>
+        </AnimatedSection>
 
-        <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-        >
-          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400 dark:text-neutral-500 mb-8 border-b border-neutral-200 dark:border-neutral-800 pb-2">
-            {t.sections.stack}
-          </h2>
+        <AnimatedSection delay={0.1}>
+          <SectionHeading title={t.sections.stack} />
           <TechnicalStack />
-        </motion.section>
+        </AnimatedSection>
 
-        <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
-        >
+        <AnimatedSection delay={0.15}>
           <EducationSection />
-        </motion.section>
+        </AnimatedSection>
 
         <Footer />
       </motion.div>
