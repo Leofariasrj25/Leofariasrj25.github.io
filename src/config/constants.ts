@@ -5,44 +5,33 @@ export const DEFAULT_LOCALE: Locale = "pt-BR";
 export const SUPPORTED_LOCALES: { code: Locale; label: string }[] = [
   { code: "pt-BR", label: "PT" },
   { code: "en", label: "EN" },
-  { code: "es", label: "ES" },
 ];
 
 const skillsPt = [
-  "TypeScript",
+  "Python",
+  "Java",
+  "C/C++",
+  "Spring",
   "React",
-  "Node.js",
-  "Next.js",
-  "NestJS",
   "PostgreSQL",
   "Docker",
   "AWS",
   "CI/CD",
 ];
 
-const skillsEn = [
-  "TypeScript",
-  "React",
-  "Node.js",
-  "Next.js",
-  "NestJS",
-  "PostgreSQL",
-  "Docker",
-  "AWS",
-  "CI/CD",
-];
+// const skillsEn = [
+//   'TypeScript',
+//   'React',
+//   'Node.js',
+//   'Next.js',
+//   'NestJS',
+//   'PostgreSQL',
+//   'Docker',
+//   'AWS',
+//   'CI/CD'
+// ];
 
-const skillsEs = [
-  "TypeScript",
-  "React",
-  "Node.js",
-  "Next.js",
-  "NestJS",
-  "PostgreSQL",
-  "Docker",
-  "AWS",
-  "CI/CD",
-];
+const skillsEn = skillsPt;
 
 export const TRANSLATIONS: Record<Locale, TranslationContent> = {
   "pt-BR": {
@@ -55,18 +44,18 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
       languages: "Idiomas",
     },
     hero: {
-      name: "Seu Nome",
-      role: "Seu Cargo Principal",
-      nationality: "Sua Nacionalidade",
-      location: "Sua Cidade, Pais",
-      phone: "+55 (00) 00000-0000",
-      email: "voce@seudominio.com",
-      seo: "Seu titulo SEO aqui.",
+      name: "Leonardo Farias",
+      role: "Desenvolvedor de Software",
+      nationality: "🇧🇷 Brasil",
+      location: "Rio de Janeiro, Brasil",
+      phone: "+55 (21) 98253-6300",
+      email: "leofariasrj25@gmail.com",
       about: [
-        "Escreva aqui um resumo curto sobre quem voce e e qual problema voce resolve.",
-        "No segundo paragrafo, explique sua especialidade tecnica e sua forma de trabalho.",
-        "No terceiro, destaque impacto de negocio, lideranca tecnica e resultados concretos.",
+        "Profissional com mais de 10 anos de experiência prévia em atendimento ao cliente e gestão operacional em setores diversos. Essa vivência me tornou um profissional pragmático, focado em resolver problemas de negócio de forma autônoma e rápida, entendendo que o código é o meio para facilitar a operação e entregar valor real ao usuário.",
+        "Atuo com **React** no front-end e no back-end utilizo **Java**, **Python** e **Go**, desenvolvendo desde fundamentos de sistemas e ferramentas de linha de comando até arquiteturas na nuvem. Tenho experiência prática no desenvolvimento de APIs, modelagem de dados (`SQL` e `noSQL`) e infraestrutura serverless no ecossistema **AWS**, evoluindo aplicações com segurança, previsibilidade e código limpo. Também aplico automação e integrações de IA para cruzar informações em tempo real e transformar processos manuais em análises autônomas, reduzindo o tempo operacional e entregando ferramentas práticas para o negócio.",
+        "Alguns dos frutos dessa expertise e evolução contínua foram a conquista do 2º lugar no Hackathon de Microcrédito do BNDES, a produção do AlmanaqueBot um assistente digital para apostas esportivas e a certificação **AWS Cloud Practitioner**, atualmente estou estudando para a certificação **AWS Developer**, consolidando minha capacidade de criar aplicações robustas na nuvem.",
       ],
+      seo: "Desenvolvedor React, Java, Python e Go. AWS Cloud Practitioner. 2º lugar Hackathon BNDES Microcrédito. Builder de soluções serverless e IA.",
     },
     actions: {
       visitProject: "Visitar projeto",
@@ -75,52 +64,43 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
     projects: [
       {
         id: "project-one",
-        title: "Projeto 01",
-        url: "https://seu-projeto.com",
-        tagline: "Tagline curta com proposta de valor.",
+        title: "AlmanaqueBot",
+        url: "https://almanaquebot.app",
+        tagline: "Seu analista digital e personalizado de apostas esportivas.",
         description:
-          "Descreva o projeto, o contexto, as tecnologias e o resultado principal em uma frase clara.",
+          "Um chatbot integrado a dados históricos de partidas de futebol e outros esportes com o intuito de auxiliar apostadores a tomarem decisões mais embasadas. Liderei o time com ênfase na ideação, gestão de prototipagem rápida da equipe, codificação das features chave e entrega do MVP validado.",
         bullets: [
-          "Stack principal e arquitetura adotada.",
-          "Desafio tecnico mais relevante e como foi resolvido.",
-          "Resultado mensuravel obtido com o projeto.",
+          "Arquitetura serverless end-to-end em AWS (Lambda, API Gateway, DynamoDB, S3) com front-end em React gerenciado e hospedado via AWS Amplify.",
+          "Integração com Gemini, implementando tool calling para consumo autônomo de APIs externas e cruzamento de dados esportivos em tempo real.",
+          "Desenvolvimento do core back-end em Typescript",
+          "Infraestrutura, segurança e governança estruturadas com AWS Cognito, WAF, IAM e orquestração via AWS CLI/CDK.",
         ],
       },
       {
         id: "project-two",
-        title: "Projeto 02",
-        url: "https://seu-projeto.com",
-        tagline: "Produto digital com foco em escalabilidade.",
-        description: "Use este espaco para mostrar dominio tecnico e pensamento de produto.",
+        title: "LH Nauticals",
+        url: "https://github.com/Leofariasrj25/desafio_indicium_lhnauticals",
+        tagline: "Engenharia de Dados End-to-End e Inteligência para Tomada de Decisão..",
+        description:
+          "Case técnico do programa Indicium Lighthouse focado em transformar dados brutos em decisões estratégicas de negócio. Construí um pipeline ETL completo (Arquitetura Medallion) que serviu de base para identificar gargalos operacionais, analisar lucratividade e gerar modelos preditivos.",
         bullets: [
-          "Automacao de fluxo critico do negocio.",
-          "Melhoria de performance e observabilidade.",
-          "Evolucao de experiencia de usuario orientada por dados.",
-        ],
-      },
-      {
-        id: "project-three",
-        title: "Projeto 03",
-        url: "https://seu-projeto.com",
-        tagline: "Ferramenta interna para acelerar operacoes.",
-        description: "Mostre como voce entrega valor de forma pragmatica e sustentavel.",
-        bullets: [
-          "Padronizacao de processos e reducao de retrabalho.",
-          "Integracao com APIs e servicos externos.",
-          "Documentacao e governanca tecnica.",
+          "Implementação das camadas Bronze, Silver e Gold, garantindo governança de dados, escalabilidade e padrão de mercado",
+          "Desenvolvimento de pipeline ETL modular e vetorizado em Python/Pandas, com gestão de dependências via Poetry e orquestração via Makefiles.",
+          "Criação de sistemas de recomendação (filtragem colaborativa) e modelos de previsão de demanda.",
+          "Tradução de dados complexos em resultados de negócio, entregando análises de lucratividade e insights acionáveis para guiar decisões estratégicas da empresa.",
         ],
       },
     ],
     experiences: [
       {
-        company: "Empresa Atual",
-        location: "Remoto / Cidade, Pais",
-        role: "Cargo Atual",
+        company: "Escola da Nuvem",
+        location: "Remoto, Brasil",
+        role: "Mentor Técnico",
         period: "01/2024 - Presente",
         bullets: [
-          "Liderou entregas de alto impacto em produto e engenharia.",
-          "Melhorou confiabilidade com testes, observabilidade e padroes.",
-          "Apoiou decisoes de arquitetura com foco em escala e manutencao.",
+          "Orientar alunos na jornada de aprendizado do ecossistema AWS, oferecendo suporte técnico direcionado para a preparação e conquista de certificações oficiais (como a Cloud Practitioner).",
+
+          "Atuar no destravamento de dúvidas técnicas e na resolução detalhada de simulados, ajudando os estudantes a identificar lacunas de conhecimento e a refinar suas estratégias de estudo.",
         ],
       },
       {
@@ -137,17 +117,17 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
     ],
     skills: skillsPt,
     education: {
-      institution: "Universidade ou Instituicao",
-      degree: "Curso / Formacao",
-      date: "MM/AAAA",
+      institution: "École 42",
+      degree: "Engenharia de Software",
+      date: "12/2026",
       languages: [
-        { name: "Portugues", level: "Nativo" },
-        { name: "Ingles", level: "Avancado" },
+        { name: "Português", level: "Nativo" },
+        { name: "Inglês", level: "Avançado" },
       ],
     },
     footer: {
-      copyright: "© 2026 Seu Nome",
-      role: "Seu Cargo",
+      copyright: "© 2026 Leonardo Farias dos Santos",
+      role: "Desenvolvedor de Software",
     },
   },
   en: {
@@ -160,18 +140,18 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
       languages: "Languages",
     },
     hero: {
-      name: "Your Name",
-      role: "Your Primary Role",
-      nationality: "Your Nationality",
-      location: "Your City, Country",
-      phone: "+00 000 000 0000",
-      email: "you@yourdomain.com",
-      seo: "Your SEO title here.",
+      name: "Leonardo Farias",
+      role: "Software Developer",
+      nationality: "🇧🇷 Brazil",
+      location: "Rio de Janeiro, Brazil",
+      phone: "+55 (21) 98253-6300",
+      email: "leofariasrj25@gmail.com",
       about: [
-        "Write a short summary about who you are and what problem you solve.",
-        "In the second paragraph, explain your technical specialty and working style.",
-        "In the third paragraph, highlight business impact, leadership and outcomes.",
+        "Professional with more than 10 years of prior experience in customer service and operational management in diverse sectors. This experience made me a pragmatic professional, focused on solving business problems autonomously and quickly, understanding that code is the means to facilitate operations and deliver real value to the user.",
+        "I work with **React** on the front-end and use **Java**, **Python**, and **Go** on the back-end, developing everything from system fundamentals and command-line tools to cloud architectures. I have practical experience in API development, data modeling (`SQL` and `noSQL`), and serverless infrastructure in the **AWS** ecosystem, evolving applications with security, predictability, and clean code. I also apply automation and AI integrations to cross-reference information in real-time and transform manual processes into autonomous analyses, reducing operational time and delivering practical tools for the business.",
+        "Some of the fruits of this expertise and continuous evolution were the 2nd place in the BNDES Microcredit Hackathon, the creation of AlmanaqueBot a digital assistant for sports betting, and the **AWS Cloud Practitioner** certification. I am currently studying for the **AWS Developer** certification, consolidating my ability to create robust applications in the cloud.",
       ],
+      seo: "React Developer, Java, Python, Go. AWS Cloud Practitioner. 2nd place BNDES Microcredit Hackathon. Serverless and AI solutions builder.",
     },
     actions: {
       visitProject: "Visit project",
@@ -180,52 +160,42 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
     projects: [
       {
         id: "project-one",
-        title: "Project 01",
-        url: "https://your-project.com",
-        tagline: "A short value proposition tagline.",
+        title: "AlmanaqueBot",
+        url: "https://almanaquebot.app",
+        tagline: "Your digital and personalized sports betting analyst.",
         description:
-          "Describe the project, context, technology choices, and core outcome in one clear sentence.",
+          "A chatbot integrated with historical football and other sports data to help bettors make more informed decisions. I led the team with emphasis on ideation, rapid prototyping team management, key feature coding, and validated MVP delivery.",
         bullets: [
-          "Main stack and architecture decisions.",
-          "Most relevant technical challenge and solution.",
-          "Measured outcome delivered by the project.",
+          "End-to-end serverless architecture on AWS (Lambda, API Gateway, DynamoDB, S3) with React front-end managed and hosted via AWS Amplify.",
+          "Integration with Gemini, implementing tool calling for autonomous consumption of external APIs and real-time sports data cross-referencing.",
+          "Core back-end development in TypeScript.",
+          "Infrastructure, security, and governance structured with AWS Cognito, WAF, IAM, and orchestration via AWS CLI/CDK.",
         ],
       },
       {
         id: "project-two",
-        title: "Project 02",
-        url: "https://your-project.com",
-        tagline: "Digital product focused on scalability.",
-        description: "Use this space to demonstrate technical depth and product thinking.",
+        title: "LH Nauticals",
+        url: "https://github.com/Leofariasrj25/desafio_indicium_lhnauticals",
+        tagline: "End-to-End Data Engineering and Intelligence for Decision Making.",
+        description:
+          "Technical case study from the Indicium Lighthouse program focused on transforming raw data into strategic business decisions. I built a complete ETL pipeline (Medallion Architecture) that served as the basis for identifying operational bottlenecks, analyzing profitability, and generating predictive models.",
         bullets: [
-          "Automation for a critical business workflow.",
-          "Performance and observability improvements.",
-          "Data-informed user experience enhancements.",
-        ],
-      },
-      {
-        id: "project-three",
-        title: "Project 03",
-        url: "https://your-project.com",
-        tagline: "Internal tool to accelerate operations.",
-        description: "Show how you deliver practical and sustainable value.",
-        bullets: [
-          "Process standardization and reduced rework.",
-          "Integrations with external APIs and services.",
-          "Technical governance and documentation quality.",
+          "Implementation of Bronze, Silver, and Gold layers, ensuring data governance, scalability, and market standards.",
+          "Development of modular and vectorized ETL pipeline in Python/Pandas, with dependency management via Poetry and orchestration via Makefiles.",
+          "Creation of recommendation systems (collaborative filtering) and demand forecasting models.",
+          "Translation of complex data into business results, delivering profitability analysis and actionable insights to guide strategic company decisions.",
         ],
       },
     ],
     experiences: [
       {
-        company: "Current Company",
-        location: "Remote / City, Country",
-        role: "Current Role",
+        company: "Escola da Nuvem",
+        location: "Remote, Brazil",
+        role: "Technical Mentor",
         period: "01/2024 - Present",
         bullets: [
-          "Led high-impact deliveries across product and engineering.",
-          "Improved reliability through testing, observability, and standards.",
-          "Supported architectural decisions focused on scale and maintainability.",
+          "Guided students through the AWS ecosystem learning journey, providing targeted technical support for preparation and achievement of official certifications (such as Cloud Practitioner).",
+          "Worked on unlocking technical doubts and detailed resolution of practice tests, helping students identify knowledge gaps and refine their study strategies.",
         ],
       },
       {
@@ -234,129 +204,25 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
         role: "Previous Role",
         period: "01/2022 - 12/2023",
         bullets: [
-          "Built strategic features in close collaboration with product teams.",
-          "Reduced operational cost through technical automation.",
-          "Mentored teammates on engineering best practices.",
+          "Built strategic functionalities in collaboration with product.",
+          "Reduced operational costs with technical automations.",
+          "Mentored team members on development best practices.",
         ],
       },
     ],
     skills: skillsEn,
     education: {
-      institution: "University or Institution",
-      degree: "Degree / Program",
-      date: "MM/YYYY",
+      institution: "École 42",
+      degree: "Software Engineering",
+      date: "12/2026",
       languages: [
-        { name: "English", level: "Fluent" },
-        { name: "Spanish", level: "Intermediate" },
+        { name: "Portuguese", level: "Native" },
+        { name: "English", level: "Advanced" },
       ],
     },
     footer: {
-      copyright: "© 2026 Your Name",
-      role: "Your Role",
-    },
-  },
-  es: {
-    sections: {
-      about: "Sobre",
-      projects: "Proyectos Destacados",
-      experience: "Experiencia Profesional",
-      stack: "Stack Tecnico",
-      education: "Formacion",
-      languages: "Idiomas",
-    },
-    hero: {
-      name: "Tu Nombre",
-      role: "Tu Rol Principal",
-      nationality: "Tu Nacionalidad",
-      location: "Tu Ciudad, Pais",
-      phone: "+00 000 000 0000",
-      email: "tu@tudominio.com",
-      about: [
-        "Escribe un resumen corto sobre quien eres y que problema resuelves.",
-        "En el segundo parrafo, explica tu especialidad tecnica y forma de trabajo.",
-        "En el tercero, destaca impacto de negocio, liderazgo tecnico y resultados.",
-      ],
-    },
-    actions: {
-      visitProject: "Visitar proyecto",
-      languageLabel: "Idioma",
-    },
-    projects: [
-      {
-        id: "project-one",
-        title: "Proyecto 01",
-        url: "https://tu-proyecto.com",
-        tagline: "Una propuesta de valor clara y corta.",
-        description:
-          "Describe el proyecto, el contexto, la tecnologia y el resultado clave en una frase.",
-        bullets: [
-          "Stack principal y decisiones de arquitectura.",
-          "Desafio tecnico mas importante y solucion.",
-          "Resultado medible entregado por el proyecto.",
-        ],
-      },
-      {
-        id: "project-two",
-        title: "Proyecto 02",
-        url: "https://tu-proyecto.com",
-        tagline: "Producto digital con foco en escalabilidad.",
-        description: "Usa este espacio para mostrar profundidad tecnica y vision de producto.",
-        bullets: [
-          "Automatizacion de flujo critico del negocio.",
-          "Mejoras de performance y observabilidad.",
-          "Evolucion de experiencia de usuario guiada por datos.",
-        ],
-      },
-      {
-        id: "project-three",
-        title: "Proyecto 03",
-        url: "https://tu-proyecto.com",
-        tagline: "Herramienta interna para acelerar operaciones.",
-        description: "Muestra como entregas valor de forma practica y sostenible.",
-        bullets: [
-          "Estandarizacion de procesos y reduccion de retrabajo.",
-          "Integraciones con APIs y servicios externos.",
-          "Gobernanza tecnica y documentacion de calidad.",
-        ],
-      },
-    ],
-    experiences: [
-      {
-        company: "Empresa Actual",
-        location: "Remoto / Ciudad, Pais",
-        role: "Rol Actual",
-        period: "01/2024 - Presente",
-        bullets: [
-          "Lidero entregas de alto impacto entre producto e ingenieria.",
-          "Mejoro confiabilidad con pruebas, observabilidad y estandares.",
-          "Apoyo decisiones de arquitectura con foco en escala y mantenimiento.",
-        ],
-      },
-      {
-        company: "Empresa Anterior",
-        location: "Ciudad, Pais",
-        role: "Rol Anterior",
-        period: "01/2022 - 12/2023",
-        bullets: [
-          "Construyo funcionalidades estrategicas junto a producto.",
-          "Reduzco costos operativos mediante automatizaciones.",
-          "Mentoreo al equipo en buenas practicas de desarrollo.",
-        ],
-      },
-    ],
-    skills: skillsEs,
-    education: {
-      institution: "Universidad o Institucion",
-      degree: "Carrera / Programa",
-      date: "MM/AAAA",
-      languages: [
-        { name: "Espanol", level: "Nativo" },
-        { name: "Ingles", level: "Avanzado" },
-      ],
-    },
-    footer: {
-      copyright: "© 2026 Tu Nombre",
-      role: "Tu Rol",
+      copyright: "© 2026 Leonardo Farias dos Santos",
+      role: "Software Developer",
     },
   },
 };
@@ -364,7 +230,6 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
 export const normalizeLocale = (value?: string | null): Locale => {
   const lang = (value ?? "").toLowerCase();
   if (lang.startsWith("pt")) return "pt-BR";
-  if (lang.startsWith("es")) return "es";
   if (lang.startsWith("en")) return "en";
   return DEFAULT_LOCALE;
 };
