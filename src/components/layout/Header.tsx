@@ -6,11 +6,7 @@ import Markdown from "@/components/ui/Markdown";
 import ParticlesToggle from "@/components/ui/ParticlesToggle";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 import { useI18n } from "@/i18n";
-
-interface HeaderProps {
-  particlesEnabled: boolean;
-  onToggleParticles: () => void;
-}
+import type { HeaderProps } from "@/types";
 
 const Header: React.FC<HeaderProps> = ({ particlesEnabled, onToggleParticles }) => {
   const { t, locale } = useI18n();

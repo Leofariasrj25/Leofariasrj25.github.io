@@ -23,6 +23,16 @@ export interface Education {
 
 export type Locale = "pt-BR" | "en";
 
+export interface LocaleOption {
+  code: Locale;
+  label: string;
+}
+
+export interface HeaderProps {
+  particlesEnabled: boolean;
+  onToggleParticles: () => void;
+}
+
 export interface LanguageProficiency {
   name: string;
   level: string;
