@@ -7,12 +7,7 @@ import { useI18n } from "@/i18n";
 
 const Header: React.FC = () => {
   const { t } = useI18n();
-  const initials = t.hero.name
-    .split(" ")
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0]?.toUpperCase())
-    .join("");
+  const [imgError, setImgError] = React.useState(false);
 
   return (
     <header className="space-y-12">
@@ -24,13 +19,32 @@ const Header: React.FC = () => {
       >
         <div className="space-y-3">
           <motion.div
-            className="w-28 h-28 rounded-full ring-2 ring-neutral-200 dark:ring-neutral-700 bg-neutral-900 dark:bg-neutral-100 text-neutral-100 dark:text-neutral-900 flex items-center justify-center text-3xl font-extrabold tracking-tight"
+            className="w-28 h-28 rounded-full ring-2 ring-neutral-200 dark:ring-neutral-700 overflow-hidden bg-neutral-900 dark:bg-neutral-100 flex items-center justify-center text-3xl font-extrabold tracking-tight text-neutral-100 dark:text-neutral-900"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            aria-label="Profile placeholder"
           >
-            {initials || "YN"}
+            {imgError ? (
+              <span aria-hidden="true">
+                {t.hero.name
+                  .split(" ")
+                  .filter(Boolean)
+                  .slice(0, 2)
+                  .map((part) => part[0]?.toUpperCase())
+                  .join("")}
+              </span>
+            ) : (
+              <img
+                src="/avatar.jpg"
+                alt={`${t.hero.name} profile`}
+                width={112}
+                height={112}
+                loading="eager"
+                fetchPriority="high"
+                className="w-full h-full object-cover"
+                onError={() => setImgError(true)}
+              />
+            )}
           </motion.div>
           <div className="flex flex-col sm:items-start sm:gap-2">
             <div className="flex justify-between w-full items-center gap-3">
