@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#0B0B0B"/>
+    </linearGradient>
+    <clipPath id="circle">
+      <circle cx="600" cy="315" r="200"/>
+    </clipPath>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="600" cy="315" r="200" fill="none" stroke="#f97316" stroke-width="4"/>
+  <circle cx="600" cy="315" r="196" fill="#f97316" clip-path="url(#circle)"/>
+  <image href="/avatar.jpg" x="400" y="115" width="400" height="400" preserveAspectRatio="xMidYMid slice" clip-path="url(#circle)"/>
+  <text x="600" y="580" font-family="system-ui, sans-serif" font-size="52" font-weight="700" fill="#f5f5f5" text-anchor="middle">Leonardo Farias</text>
+</svg>
