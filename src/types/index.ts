@@ -1,4 +1,3 @@
-
 export interface Project {
   id: string;
   title: string;
@@ -22,7 +21,7 @@ export interface Education {
   date: string;
 }
 
-export type Locale = 'pt-BR' | 'en' | 'es';
+export type Locale = "pt-BR" | "en" | "es";
 
 export interface LanguageProficiency {
   name: string;

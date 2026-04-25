@@ -1,12 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { SUPPORTED_LOCALES } from '@/config/constants';
-import { useI18n } from '@/i18n';
-import type { Locale } from '@/types';
+import React, { useEffect, useRef, useState } from "react";
+
+import { SUPPORTED_LOCALES } from "@/config/constants";
+import { useI18n } from "@/i18n";
+import type { Locale } from "@/types";
 
 const FLAG_STYLES: Record<Locale, string> = {
-  'pt-BR': 'bg-gradient-to-br from-green-500 via-yellow-300 to-green-700',
-  en: 'bg-gradient-to-br from-blue-600 via-white to-red-500',
-  es: 'bg-gradient-to-br from-red-600 via-yellow-400 to-red-700'
+  "pt-BR": "bg-gradient-to-br from-green-500 via-yellow-300 to-green-700",
+  en: "bg-gradient-to-br from-blue-600 via-white to-red-500",
+  es: "bg-gradient-to-br from-red-600 via-yellow-400 to-red-700",
 };
 
 const LanguageSwitcher: React.FC = () => {
@@ -21,12 +22,12 @@ const LanguageSwitcher: React.FC = () => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const active = SUPPORTED_LOCALES.find((opt) => opt.code === locale);
-  const activeFlag = active ? FLAG_STYLES[active.code] : FLAG_STYLES['pt-BR'];
+  const activeFlag = active ? FLAG_STYLES[active.code] : FLAG_STYLES["pt-BR"];
 
   return (
     <div className="relative" ref={ref}>
@@ -37,8 +38,11 @@ const LanguageSwitcher: React.FC = () => {
         aria-haspopup="listbox"
         aria-expanded={open}
       >
-        <span className={`w-4 h-4 rounded-full ${activeFlag} border border-white/70 dark:border-neutral-800`} aria-hidden />
-        <span className="text-[11px] tracking-[0.1em] uppercase">{active?.label ?? 'PT'}</span>
+        <span
+          className={`w-4 h-4 rounded-full ${activeFlag} border border-white/70 dark:border-neutral-800`}
+          aria-hidden
+        />
+        <span className="text-[11px] tracking-[0.1em] uppercase">{active?.label ?? "PT"}</span>
         <svg
           className="w-4 h-4 text-neutral-400 dark:text-neutral-500"
           viewBox="0 0 20 20"
@@ -67,11 +71,14 @@ const LanguageSwitcher: React.FC = () => {
                   aria-selected={option.code === locale}
                   className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm font-semibold transition-colors ${
                     option.code === locale
-                      ? 'bg-orange-50 dark:bg-orange-900/30 text-orange-700 dark:text-orange-200'
-                      : 'text-neutral-700 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-800'
+                      ? "bg-orange-50 dark:bg-orange-900/30 text-orange-700 dark:text-orange-200"
+                      : "text-neutral-700 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-800"
                   }`}
                 >
-                  <span className={`w-5 h-5 rounded-full ${FLAG_STYLES[option.code]} border border-white/70 dark:border-neutral-800`} aria-hidden />
+                  <span
+                    className={`w-5 h-5 rounded-full ${FLAG_STYLES[option.code]} border border-white/70 dark:border-neutral-800`}
+                    aria-hidden
+                  />
                   <span>{option.label}</span>
                 </button>
               </li>

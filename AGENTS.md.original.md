@@ -12,14 +12,15 @@ Agentic coding guidelines for this codebase. ~150 lines.
 
 ## Commands
 
-| Task | Command |
-|------|---------|
-| Dev server | `bun dev` or `npm run dev` |
-| Build | `bun build` or `npm run build` |
-| Preview build | `bun preview` or `npm run preview` |
-| Typecheck | Bun runs TS checks via Vite; no separate command |
+| Task          | Command                                          |
+| ------------- | ------------------------------------------------ |
+| Dev server    | `bun dev` or `npm run dev`                       |
+| Build         | `bun build` or `npm run build`                   |
+| Preview build | `bun preview` or `npm run preview`               |
+| Typecheck     | Bun runs TS checks via Vite; no separate command |
 
 **No test framework present.** If adding tests, use Vitest:
+
 ```bash
 bun add -d vitest
 bun vitest run           # single run
@@ -35,12 +36,12 @@ bun vitest run filename # single file
 - No relative paths beyond `./` or `../`
 
 ```tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import Header from '@/components/layout/Header';
-import Projects from '@/components/sections/Projects';
-import { useI18n } from '@/i18n';
-import { Project } from '@/types';
+import React from "react";
+import { motion } from "framer-motion";
+import Header from "@/components/layout/Header";
+import Projects from "@/components/sections/Projects";
+import { useI18n } from "@/i18n";
+import { Project } from "@/types";
 ```
 
 ### React Components
@@ -81,7 +82,7 @@ export interface Project {
   bullets: string[];
 }
 
-export type Locale = 'pt-BR' | 'en' | 'es';
+export type Locale = "pt-BR" | "en" | "es";
 ```
 
 ### Hooks & Context
@@ -94,7 +95,7 @@ export type Locale = 'pt-BR' | 'en' | 'es';
 export const useTheme = (): ThemeContextValue => {
   const context = useContext(ThemeContext);
   if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider');
+    throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
 };
@@ -108,8 +109,8 @@ export const useTheme = (): ThemeContextValue => {
 
 ```typescript
 try {
-  const stored = localStorage.getItem('theme');
-  if (stored === 'light' || stored === 'dark') {
+  const stored = localStorage.getItem("theme");
+  if (stored === "light" || stored === "dark") {
     return stored;
   }
 } catch {
