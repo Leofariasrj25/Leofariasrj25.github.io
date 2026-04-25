@@ -60,6 +60,7 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
     actions: {
       visitProject: "Visitar projeto",
       languageLabel: "Idioma",
+      downloadResume: "Baixar Currículo",
     },
     projects: [
       {
@@ -156,6 +157,7 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
     actions: {
       visitProject: "Visit project",
       languageLabel: "Language",
+      downloadResume: "Download Resume",
     },
     projects: [
       {

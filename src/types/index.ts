@@ -50,6 +50,7 @@ export interface TranslationContent {
   actions: {
     visitProject: string;
     languageLabel: string;
+    downloadResume: string;
   };
   projects: Project[];
   experiences: WorkExperience[];

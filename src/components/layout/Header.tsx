@@ -6,7 +6,7 @@ import ThemeToggle from "@/components/ui/ThemeToggle";
 import { useI18n } from "@/i18n";
 
 const Header: React.FC = () => {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [imgError, setImgError] = React.useState(false);
 
   return (
@@ -111,7 +111,7 @@ const Header: React.FC = () => {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
       >
         <motion.a
-          href="https://linkedin.com/in/your-profile"
+          href="https://linkedin.com/in/leofariasrj25"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-5 py-2.5 border border-neutral-200 dark:border-neutral-800 rounded-lg text-sm font-bold text-neutral-600 dark:text-neutral-200 hover:border-orange-500 dark:hover:border-orange-400 hover:text-orange-600 dark:hover:text-orange-200 hover:bg-orange-50/30 dark:hover:bg-orange-900/20 transition-all shadow-sm group"
@@ -127,7 +127,7 @@ const Header: React.FC = () => {
           LinkedIn
         </motion.a>
         <motion.a
-          href="https://github.com/your-username"
+          href="https://github.com/leofariasrj25"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-5 py-2.5 border border-neutral-200 dark:border-neutral-800 rounded-lg text-sm font-bold text-neutral-600 dark:text-neutral-200 hover:border-orange-500 dark:hover:border-orange-400 hover:text-orange-600 dark:hover:text-orange-200 hover:bg-orange-50/30 dark:hover:bg-orange-900/20 transition-all shadow-sm group"
@@ -143,7 +143,7 @@ const Header: React.FC = () => {
           GitHub
         </motion.a>
         <motion.a
-          href="https://x.com/your-handle"
+          href={`/resumes/curriculo-leonardo-farias-santos${locale === "en" ? ".en" : ""}.pdf`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-5 py-2.5 border border-neutral-200 dark:border-neutral-800 rounded-lg text-sm font-bold text-neutral-600 dark:text-neutral-200 hover:border-orange-500 dark:hover:border-orange-400 hover:text-orange-600 dark:hover:text-orange-200 hover:bg-orange-50/30 dark:hover:bg-orange-900/20 transition-all shadow-sm group"
@@ -154,9 +154,9 @@ const Header: React.FC = () => {
             className="w-4 h-4 fill-current group-hover:text-orange-600 dark:group-hover:text-orange-200"
             viewBox="0 0 24 24"
           >
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-6 2h12v2H6v-2z" />
           </svg>
-          @your-handle
+          {t.actions.downloadResume}
         </motion.a>
       </motion.div>
     </header>
