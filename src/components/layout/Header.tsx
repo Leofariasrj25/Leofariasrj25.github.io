@@ -3,10 +3,16 @@ import React from "react";
 
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 import Markdown from "@/components/ui/Markdown";
+import ParticlesToggle from "@/components/ui/ParticlesToggle";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 import { useI18n } from "@/i18n";
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  particlesEnabled: boolean;
+  onToggleParticles: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ particlesEnabled, onToggleParticles }) => {
   const { t, locale } = useI18n();
   const [imgError, setImgError] = React.useState(false);
 
@@ -53,6 +59,7 @@ const Header: React.FC = () => {
                 {t.hero.name}
               </h1>
               <div className="flex items-center gap-1">
+                <ParticlesToggle enabled={particlesEnabled} onToggle={onToggleParticles} />
                 <ThemeToggle />
                 <LanguageSwitcher />
               </div>

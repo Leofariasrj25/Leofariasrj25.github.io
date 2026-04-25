@@ -7,20 +7,43 @@ import EducationSection from "@/components/sections/Education";
 import Experience from "@/components/sections/Experience";
 import Projects from "@/components/sections/Projects";
 import TechnicalStack from "@/components/sections/TechnicalStack";
+import AsciiParticles from "@/components/ui/AsciiParticles";
 import { useI18n } from "@/i18n";
 
 const App: React.FC = () => {
   const { t } = useI18n();
+  const [particlesEnabled, setParticlesEnabled] = React.useState(() => {
+    if (typeof window === "undefined") return true;
+    try {
+      const stored = localStorage.getItem("particles");
+      return stored === null ? true : stored === "true";
+    } catch {
+      return true;
+    }
+  });
+
+  const toggleParticles = () => {
+    setParticlesEnabled((prev) => {
+      const next = !prev;
+      try {
+        localStorage.setItem("particles", String(next));
+      } catch {
+        // ignore
+      }
+      return next;
+    });
+  };
 
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 text-[#0B0B0B] dark:text-neutral-100 antialiased selection:bg-orange-100 dark:selection:bg-orange-900">
+      {particlesEnabled && <AsciiParticles />}
       <motion.div
         className="max-w-[800px] mx-auto px-6 py-16 md:py-24 space-y-24"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <Header />
+        <Header particlesEnabled={particlesEnabled} onToggleParticles={toggleParticles} />
 
         <motion.section
           initial={{ opacity: 0, y: 24 }}
