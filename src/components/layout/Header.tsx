@@ -143,7 +143,7 @@ const Header: React.FC = () => {
           GitHub
         </motion.a>
         <motion.a
-          href={`/resumes/curriculo-leonardo-farias-santos${locale === "en" ? ".en" : ""}.pdf`}
+          href={`/resumes/leonardo-farias-santos${locale === "en" ? ".en" : ""}.pdf`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-5 py-2.5 border border-neutral-200 dark:border-neutral-800 rounded-lg text-sm font-bold text-neutral-600 dark:text-neutral-200 hover:border-orange-500 dark:hover:border-orange-400 hover:text-orange-600 dark:hover:text-orange-200 hover:bg-orange-50/30 dark:hover:bg-orange-900/20 transition-all shadow-sm group"
