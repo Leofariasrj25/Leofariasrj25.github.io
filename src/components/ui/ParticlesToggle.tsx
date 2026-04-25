@@ -1,9 +1,11 @@
 import React from "react";
 
-const ParticlesToggle: React.FC<{ enabled: boolean; onToggle: () => void }> = ({
-  enabled,
-  onToggle,
-}) => {
+export interface ParticlesToggleProps {
+  enabled: boolean;
+  onToggle: () => void;
+}
+
+const ParticlesToggle: React.FC<ParticlesToggleProps> = ({ enabled, onToggle }) => {
   return (
     <button
       type="button"

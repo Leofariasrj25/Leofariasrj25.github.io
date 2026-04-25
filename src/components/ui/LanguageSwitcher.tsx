@@ -7,7 +7,6 @@ import type { Locale } from "@/types";
 const FLAG_STYLES: Record<Locale, string> = {
   "pt-BR": "bg-gradient-to-br from-green-500 via-yellow-300 to-green-700",
   en: "bg-gradient-to-br from-blue-600 via-white to-red-500",
-  es: "bg-gradient-to-br from-red-600 via-yellow-400 to-red-700",
 };
 
 const LanguageSwitcher: React.FC = () => {

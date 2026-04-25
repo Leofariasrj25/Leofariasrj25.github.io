@@ -1,8 +1,8 @@
-import { Locale, TranslationContent } from "@/types";
+import { Locale, LocaleOption, TranslationContent } from "@/types";
 
 export const DEFAULT_LOCALE: Locale = "pt-BR";
 
-export const SUPPORTED_LOCALES: { code: Locale; label: string }[] = [
+export const SUPPORTED_LOCALES: LocaleOption[] = [
   { code: "pt-BR", label: "PT" },
   { code: "en", label: "EN" },
 ];

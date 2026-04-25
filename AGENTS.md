@@ -175,3 +175,7 @@ src/
 - No magic numbers; extract to constants
 - Env vars via `.env` files; never commit secrets
 - Use `export` for public APIs; avoid default where appropriate
+
+## Protected Files and Directories
+
+- **post_mortem/**: Never delete, modify, or alter this directory or any of its contents without explicit and express permission from the user. This restriction applies to all operations including but not limited to: deletion, renaming, moving, content changes, and permission changes.
