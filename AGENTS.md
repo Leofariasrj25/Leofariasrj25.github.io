@@ -12,14 +12,15 @@ Agentic coding guidelines. ~150 lines.
 
 ## Commands
 
-| Task | Command |
-|------|---------|
-| Dev server | `bun dev` / `npm run dev` |
-| Build | `bun build` / `npm run build` |
-| Preview | `bun preview` / `npm run preview` |
-| Typecheck | Bun runs via Vite; no separate command |
+| Task       | Command                                |
+| ---------- | -------------------------------------- |
+| Dev server | `bun dev` / `npm run dev`              |
+| Build      | `bun build` / `npm run build`          |
+| Preview    | `bun preview` / `npm run preview`      |
+| Typecheck  | Bun runs via Vite; no separate command |
 
 **No test framework.** Add tests with Vitest:
+
 ```bash
 bun add -d vitest
 bun vitest run           # single run
@@ -35,12 +36,12 @@ bun vitest run filename # single file
 - No relative paths beyond `./` / `../`
 
 ```tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import Header from '@/components/layout/Header';
-import Projects from '@/components/sections/Projects';
-import { useI18n } from '@/i18n';
-import { Project } from '@/types';
+import React from "react";
+import { motion } from "framer-motion";
+import Header from "@/components/layout/Header";
+import Projects from "@/components/sections/Projects";
+import { useI18n } from "@/i18n";
+import { Project } from "@/types";
 ```
 
 ### React Components
@@ -81,7 +82,7 @@ export interface Project {
   bullets: string[];
 }
 
-export type Locale = 'pt-BR' | 'en' | 'es';
+export type Locale = "pt-BR" | "en" | "es";
 ```
 
 ### Hooks & Context
@@ -94,7 +95,7 @@ export type Locale = 'pt-BR' | 'en' | 'es';
 export const useTheme = (): ThemeContextValue => {
   const context = useContext(ThemeContext);
   if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider');
+    throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
 };
@@ -108,8 +109,8 @@ export const useTheme = (): ThemeContextValue => {
 
 ```typescript
 try {
-  const stored = localStorage.getItem('theme');
-  if (stored === 'light' || stored === 'dark') {
+  const stored = localStorage.getItem("theme");
+  if (stored === "light" || stored === "dark") {
     return stored;
   }
 } catch {

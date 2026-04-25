@@ -1,11 +1,12 @@
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
-import { DEFAULT_LOCALE, TRANSLATIONS, normalizeLocale } from '@/config/constants';
-import { I18nContextValue, Locale } from '@/types';
+import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
+
+import { DEFAULT_LOCALE, normalizeLocale, TRANSLATIONS } from "@/config/constants";
+import { I18nContextValue, Locale } from "@/types";
 
 const I18nContext = createContext<I18nContextValue | null>(null);
 
 const detectLocale = (): Locale => {
-  if (typeof navigator === 'undefined') return DEFAULT_LOCALE;
+  if (typeof navigator === "undefined") return DEFAULT_LOCALE;
 
   const primary = navigator.languages?.[0] ?? navigator.language;
   return normalizeLocale(primary);
@@ -18,7 +19,7 @@ const updateMetaTags = (locale: Locale) => {
 
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) {
-    metaDesc.setAttribute('content', t.hero.seo);
+    metaDesc.setAttribute("content", t.hero.seo);
   }
 };
 
@@ -33,7 +34,7 @@ export const I18nProvider: React.FC<{ children: React.ReactNode }> = ({ children
     () => ({
       locale,
       setLocale,
-      t: TRANSLATIONS[locale]
+      t: TRANSLATIONS[locale],
     }),
     [locale]
   );
@@ -45,7 +46,7 @@ export const useI18n = (): I18nContextValue => {
   const context = useContext(I18nContext);
 
   if (!context) {
-    throw new Error('useI18n must be used within an I18nProvider');
+    throw new Error("useI18n must be used within an I18nProvider");
   }
 
   return context;

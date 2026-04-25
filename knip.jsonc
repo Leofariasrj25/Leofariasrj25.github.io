@@ -1,0 +1,12 @@
+{
+  "$schema": "https://unpkg.com/knip@3/schema.jsonc",
+  "entry": ["src/**/*.{ts,tsx}", "index.html"],
+  "project": ["src/**/*.{ts,tsx}"],
+  "ignore": ["*.test.ts", "*.test.tsx"],
+  "rules": {
+    "exports": "warn",
+    "dependencies": "warn",
+    "types": "warn",
+    "devDependencies": "off"
+  }
+}

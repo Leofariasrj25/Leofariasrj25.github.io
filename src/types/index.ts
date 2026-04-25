@@ -1,4 +1,3 @@
-
 export interface Project {
   id: string;
   title: string;
@@ -22,7 +21,7 @@ export interface Education {
   date: string;
 }
 
-export type Locale = 'pt-BR' | 'en';
+export type Locale = "pt-BR" | "en";
 
 export interface LanguageProficiency {
   name: string;
@@ -51,6 +50,7 @@ export interface TranslationContent {
   actions: {
     visitProject: string;
     languageLabel: string;
+    downloadResume: string;
   };
   projects: Project[];
   experiences: WorkExperience[];
