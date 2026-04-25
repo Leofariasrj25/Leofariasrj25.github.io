@@ -8,30 +8,15 @@ import Experience from "@/components/sections/Experience";
 import Projects from "@/components/sections/Projects";
 import TechnicalStack from "@/components/sections/TechnicalStack";
 import AsciiParticles from "@/components/ui/AsciiParticles";
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { useI18n } from "@/i18n";
 
 const App: React.FC = () => {
   const { t } = useI18n();
-  const [particlesEnabled, setParticlesEnabled] = React.useState(() => {
-    if (typeof window === "undefined") return true;
-    try {
-      const stored = localStorage.getItem("particles");
-      return stored === null ? true : stored === "true";
-    } catch {
-      return true;
-    }
-  });
+  const [particlesEnabled, setParticlesEnabled] = useLocalStorage("particles", true);
 
   const toggleParticles = () => {
-    setParticlesEnabled((prev) => {
-      const next = !prev;
-      try {
-        localStorage.setItem("particles", String(next));
-      } catch {
-        // ignore
-      }
-      return next;
-    });
+    setParticlesEnabled((prev) => !prev);
   };
 
   return (
