@@ -104,17 +104,6 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
           "Atuar no destravamento de dúvidas técnicas e na resolução detalhada de simulados, ajudando os estudantes a identificar lacunas de conhecimento e a refinar suas estratégias de estudo.",
         ],
       },
-      {
-        company: "Empresa Anterior",
-        location: "Cidade, Pais",
-        role: "Cargo Anterior",
-        period: "01/2022 - 12/2023",
-        bullets: [
-          "Construiu funcionalidades estrategicas em colaboracao com produto.",
-          "Reduziu custos operacionais com automacoes tecnicas.",
-          "Mentorou pessoas do time em boas praticas de desenvolvimento.",
-        ],
-      },
     ],
     skills: skillsPt,
     education: {
@@ -198,17 +187,6 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
         bullets: [
           "Guided students through the AWS ecosystem learning journey, providing targeted technical support for preparation and achievement of official certifications (such as Cloud Practitioner).",
           "Worked on unlocking technical doubts and detailed resolution of practice tests, helping students identify knowledge gaps and refine their study strategies.",
-        ],
-      },
-      {
-        company: "Previous Company",
-        location: "City, Country",
-        role: "Previous Role",
-        period: "01/2022 - 12/2023",
-        bullets: [
-          "Built strategic functionalities in collaboration with product.",
-          "Reduced operational costs with technical automations.",
-          "Mentored team members on development best practices.",
         ],
       },
     ],

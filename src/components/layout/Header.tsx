@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
+import Markdown from "@/components/ui/Markdown";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 import { useI18n } from "@/i18n";
 
@@ -99,7 +100,7 @@ const Header: React.FC = () => {
         </h2>
         <div className="text-neutral-700 dark:text-neutral-200 leading-relaxed text-lg md:text-xl w-full space-y-4">
           {t.hero.about.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+            <Markdown key={index}>{paragraph}</Markdown>
           ))}
         </div>
       </motion.div>
