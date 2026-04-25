@@ -29,7 +29,12 @@ beforeEach(() => {
 
   Object.defineProperty(document, "documentElement", {
     value: {
-      class: { contains: vi.fn(() => false), add: vi.fn(), remove: vi.fn() },
+      classList: {
+        contains: vi.fn(() => false),
+        add: vi.fn(() => {}),
+        remove: vi.fn(() => {}),
+        toggle: vi.fn(() => {}),
+      },
       lang: "",
       setAttribute: vi.fn(() => {}),
       getAttribute: vi.fn(() => null),
