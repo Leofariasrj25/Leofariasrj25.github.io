@@ -146,6 +146,11 @@ const Header: React.FC = () => {
           href={`/resumes/leonardo-farias-santos${locale === "en" ? ".en" : ""}.pdf`}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label={
+            locale === "en"
+              ? "Download resume, opens in new tab"
+              : "Baixar currículo, abre em nova aba"
+          }
           className="flex items-center gap-2 px-5 py-2.5 border border-neutral-200 dark:border-neutral-800 rounded-lg text-sm font-bold text-neutral-600 dark:text-neutral-200 hover:border-orange-500 dark:hover:border-orange-400 hover:text-orange-600 dark:hover:text-orange-200 hover:bg-orange-50/30 dark:hover:bg-orange-900/20 transition-all shadow-sm group"
           whileHover={{ y: -2, scale: 1.01 }}
           transition={{ type: "spring", stiffness: 260, damping: 18 }}
@@ -153,6 +158,7 @@ const Header: React.FC = () => {
           <svg
             className="w-4 h-4 fill-current group-hover:text-orange-600 dark:group-hover:text-orange-200"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
             <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-6 2h12v2H6v-2z" />
           </svg>
