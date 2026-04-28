@@ -2,3 +2,8 @@ User-agent: *
 Allow: /
 
 Sitemap: https://leofarias.me/sitemap.xml
+
+# Hreflang for internationalization
+Link: <https://leofarias.me/>; rel="alternate"; hreflang="pt-BR"
+Link: <https://leofarias.me/?lang=en>; rel="alternate"; hreflang="en"
+Link: <https://leofarias.me/>; rel="alternate"; hreflang="x-default"
