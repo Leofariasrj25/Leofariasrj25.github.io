@@ -20,7 +20,11 @@ interface Particle {
   color: string;
 }
 
-const AsciiParticles: React.FC = () => {
+interface AsciiParticlesProps {
+  enabled?: boolean;
+}
+
+const AsciiParticles: React.FC<AsciiParticlesProps> = ({ enabled = true }) => {
   const { theme } = useTheme();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
@@ -34,6 +38,11 @@ const AsciiParticles: React.FC = () => {
   }, [theme]);
 
   useEffect(() => {
+    if (!enabled) {
+      setShouldAnimate(false);
+      return;
+    }
+
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const isMobile = window.innerWidth < MOBILE_BREAKPOINT;
 
@@ -202,7 +211,12 @@ const AsciiParticles: React.FC = () => {
 
   if (!shouldAnimate) return null;
 
-  return <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" />;
+  return (
+    <canvas
+      ref={canvasRef}
+      className={`fixed inset-0 pointer-events-none z-0 ${!enabled ? "hidden" : ""}`}
+    />
+  );
 };
 
 export default AsciiParticles;

@@ -43,6 +43,10 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
       education: "Formacao",
       languages: "Idiomas",
     },
+    nav: {
+      home: "Início",
+      projects: "Projetos",
+    },
     hero: {
       name: "Leonardo Farias",
       role: "Desenvolvedor de Software",
@@ -69,7 +73,7 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
         url: "https://almanaquebot.app",
         tagline: "Seu analista digital e personalizado de apostas esportivas.",
         description:
-          "Um chatbot integrado a dados históricos de partidas de futebol e outros esportes com o intuito de auxiliar apostadores a tomarem decisões mais embasadas. Liderei o time com ênfase na ideação, gestão de prototipagem rápida da equipe, codificação das features chave e entrega do MVP validado.",
+          "Um chatbot integrado a dados históricos de partidas de futebol e outros esportes com o intuito de auxiliar apostadores a tomarem decisões mais embasadas.",
         bullets: [
           "Arquitetura serverless end-to-end em AWS (Lambda, API Gateway, DynamoDB, S3) com front-end em React gerenciado e hospedado via AWS Amplify.",
           "Integração com Gemini, implementando tool calling para consumo autônomo de APIs externas e cruzamento de dados esportivos em tempo real.",
@@ -81,14 +85,14 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
         id: "project-two",
         title: "LH Nauticals",
         url: "https://github.com/Leofariasrj25/desafio_indicium_lhnauticals",
-        tagline: "Engenharia de Dados End-to-End e Inteligência para Tomada de Decisão..",
+        tagline: "Engenharia de Dados End-to-End e Inteligência para Tomada de Decisão.",
         description:
-          "Case técnico do programa Indicium Lighthouse focado em transformar dados brutos em decisões estratégicas de negócio. Construí um pipeline ETL completo (Arquitetura Medallion) que serviu de base para identificar gargalos operacionais, analisar lucratividade e gerar modelos preditivos.",
+          "Case técnico do programa Indicium Lighthouse focado em transformar dados brutos em decisões estratégicas de negócio.",
         bullets: [
           "Implementação das camadas Bronze, Silver e Gold, garantindo governança de dados, escalabilidade e padrão de mercado",
           "Desenvolvimento de pipeline ETL modular e vetorizado em Python/Pandas, com gestão de dependências via Poetry e orquestração via Makefiles.",
           "Criação de sistemas de recomendação (filtragem colaborativa) e modelos de previsão de demanda.",
-          "Tradução de dados complexos em resultados de negócio, entregando análises de lucratividade e insights acionáveis para guiar decisões estratégicas da empresa.",
+          "Tradução de dados complexos em resultados de negócio, entregas análises de lucratividade e insights acionáveis para guiar decisões estratégicas da empresa.",
         ],
       },
     ],
@@ -129,6 +133,10 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
       education: "Education",
       languages: "Languages",
     },
+    nav: {
+      home: "Home",
+      projects: "Projects",
+    },
     hero: {
       name: "Leonardo Farias",
       role: "Software Developer",
@@ -155,7 +163,7 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
         url: "https://almanaquebot.app",
         tagline: "Your digital and personalized sports betting analyst.",
         description:
-          "A chatbot integrated with historical football and other sports data to help bettors make more informed decisions. I led the team with emphasis on ideation, rapid prototyping team management, key feature coding, and validated MVP delivery.",
+          "A chatbot integrated with historical football and other sports data to help bettors make more informed decisions.",
         bullets: [
           "End-to-end serverless architecture on AWS (Lambda, API Gateway, DynamoDB, S3) with React front-end managed and hosted via AWS Amplify.",
           "Integration with Gemini, implementing tool calling for autonomous consumption of external APIs and real-time sports data cross-referencing.",
@@ -169,7 +177,7 @@ export const TRANSLATIONS: Record<Locale, TranslationContent> = {
         url: "https://github.com/Leofariasrj25/desafio_indicium_lhnauticals",
         tagline: "End-to-End Data Engineering and Intelligence for Decision Making.",
         description:
-          "Technical case study from the Indicium Lighthouse program focused on transforming raw data into strategic business decisions. I built a complete ETL pipeline (Medallion Architecture) that served as the basis for identifying operational bottlenecks, analyzing profitability, and generating predictive models.",
+          "Technical case study from the Indicium Lighthouse program focused on transforming raw data into strategic business decisions.",
         bullets: [
           "Implementation of Bronze, Silver, and Gold layers, ensuring data governance, scalability, and market standards.",
           "Development of modular and vectorized ETL pipeline in Python/Pandas, with dependency management via Poetry and orchestration via Makefiles.",

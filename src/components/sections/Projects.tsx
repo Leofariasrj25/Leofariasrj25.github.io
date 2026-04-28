@@ -60,7 +60,7 @@ const Projects: React.FC = () => {
           </p>
 
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 mb-8">
-            {project.bullets.map((bullet, i) => (
+            {project.bullets?.map((bullet, i) => (
               <motion.li
                 key={i}
                 className="flex gap-2 text-[13px] text-neutral-500 dark:text-neutral-300 leading-relaxed"

@@ -4,7 +4,14 @@ export interface Project {
   url: string;
   tagline: string;
   description: string;
-  bullets: string[];
+  tags?: string[];
+  year?: string;
+  image?: string;
+  bullets?: string[];
+}
+
+export interface ProjectData {
+  projects: Project[];
 }
 
 export interface WorkExperience {
@@ -46,6 +53,10 @@ export interface TranslationContent {
     stack: string;
     education: string;
     languages: string;
+  };
+  nav: {
+    home: string;
+    projects: string;
   };
   hero: {
     name: string;

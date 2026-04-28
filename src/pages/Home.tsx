@@ -23,12 +23,12 @@ const Home: React.FC = () => {
   };
 
   return (
-    <>
+    <div className="bg-white dark:bg-neutral-950 text-[#0B0B0B] dark:text-neutral-100 antialiased selection:bg-orange-100 dark:selection:bg-orange-900">
       <SeoHead routeKey="home" />
-      <div className="min-h-screen bg-white dark:bg-neutral-950 text-[#0B0B0B] dark:text-neutral-100 antialiased selection:bg-orange-100 dark:selection:bg-orange-900">
-        {particlesEnabled && <AsciiParticles />}
+      <AsciiParticles enabled={particlesEnabled} />
+      <div className="max-w-[800px] mx-auto px-6 pt-16 md:pt-24">
         <motion.div
-          className="max-w-[800px] mx-auto px-6 py-16 md:py-24 space-y-24"
+          className="flex flex-col gap-16"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -57,7 +57,7 @@ const Home: React.FC = () => {
           <Footer />
         </motion.div>
       </div>
-    </>
+    </div>
   );
 };
 
